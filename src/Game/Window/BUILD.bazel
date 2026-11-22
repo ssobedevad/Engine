@@ -1,0 +1,12 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "Window",
+    srcs = glob(["*.cpp"]),
+    hdrs = glob(["*.h"]),
+    deps = [
+    "//src/Tools/Objects/Base:Base",
+    ], 
+    includes = ["."],
+    visibility = ["//src/Game:__pkg__"],
+)

@@ -1,0 +1,14 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "Game",
+    srcs = glob(["*.cpp"]),
+    hdrs = glob(["*.h"]),
+    deps = [
+        "//src/Game/Window:Window",
+        "//src/Game/InputHandler:InputHandler",
+        "//src/Tools/Objects/Base:Base",
+        ], 
+    includes = ["."],
+    visibility = ["//visibility:public"],
+)

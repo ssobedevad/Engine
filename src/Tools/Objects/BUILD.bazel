@@ -1,0 +1,10 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "Objects",
+    deps = [
+        "//src/Tools/Objects/Base:Base",
+        "//src/Tools/Objects/GUI:GUI",
+        ], 
+    visibility = ["//visibility:public"],
+)
